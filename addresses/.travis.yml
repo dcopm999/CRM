@@ -1,0 +1,19 @@
+dist: xenial
+
+language: python
+
+matrix:
+  include:
+    - name: "Python 3.7.1 on Xenial Linux"
+      python: 3.7
+      dist: xenial
+
+  fast_finish: true
+
+install: pip install -r requirements_test.txt
+script:
+- python manage.py makemigrations
+- python manage.py migrate
+- coverage run manage.py test
+after_success:
+- codecov
