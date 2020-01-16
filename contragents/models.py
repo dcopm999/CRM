@@ -34,3 +34,19 @@ class Contragent(models.Model):
 
     def __str__(self):
         return self.name
+
+class Contact(models.Model):
+    contragent = models.ForeignKey(Contragent, on_delete=models.CASCADE, editable=False, verbose_name=_("Contragent"))
+    first_name = models.CharField(max_length=50, verbose_name=_("First name"))
+    middle_name = models.CharField(max_length=50, verbose_name=_("Middle name"))
+    last_name = models.CharField(max_length=50, verbose_name=_("Last name"))
+    phone = models.CharField(max_length=200, verbose_name=_("Phone number"), null=True, blank=True)
+    position = models.CharField(max_length=50, verbose_name=_("Position"))
+    role = models.CharField(max_length=50, blank=True, null=True, verbose_name=_("Role"))
+    birthday = models.DateField(blank=True, null=True, verbose_name=_("Birth day"))
+    created = models.DateTimeField(auto_now_add=True, editable=False,  verbose_name=_("Created"))
+    edited = models.DateTimeField(auto_now=True, editable=False, verbose_name=_("Edited"))
+    
+    class Meta:
+        verbose_name = _("Contact")
+        verbose_name_plural = _("Contacts")
