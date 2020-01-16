@@ -1,0 +1,6 @@
+.vscode/
+venv/
+**/migrtions/**
+!**/migrations/__init__.py
+*~
+&.pyc
