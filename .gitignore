@@ -1,6 +1,8 @@
+db.sqlite3
 .vscode/
 venv/
-**/migrtions/**
+**/__pycache__/**
+**/migrations/**
 !**/migrations/__init__.py
 *~
-&.pyc
+*.pyc
