@@ -54,5 +54,5 @@ class Street(models.Model):
     name = models.CharField(max_length=250, blank=True, null=True, verbose_name=_("Street"))
 
     class Meta:
-        verbose_name_plural = _("Cities")
-        verbose_name = _("City")
+        verbose_name_plural = _("Streets")
+        verbose_name = _("Street")
