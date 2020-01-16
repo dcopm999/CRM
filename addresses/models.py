@@ -51,7 +51,7 @@ class District(models.Model):
 
 class Street(models.Model):
     parent = models.ForeignKey(District, verbose_name=_("District"), on_delete=models.CASCADE)
-    street = models.CharField(max_length=250, blank=True, null=True, verbose_name=_("Street"))
+    name = models.CharField(max_length=250, blank=True, null=True, verbose_name=_("Street"))
 
     class Meta:
         verbose_name_plural = _("Cities")
