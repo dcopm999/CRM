@@ -3,6 +3,7 @@ package: stocks
 description: models
 '''
 from django.db import models
+from django.utils.translation import ugettext_lazy as _
 from contragents.models import Contragent
 
 
@@ -10,27 +11,21 @@ class Stock(models.Model):
     '''
     Model for stocks
     '''
-    name = models.CharField(max_length=100, verbose_name='Название')
-    contragent = models.ForeignKey(Contragent, on_delete=models.CASCADE, verbose_name='Контрагент')
-    address = models.TextField(max_length=500, verbose_name='Адрес')
-    created = models.DateTimeField(auto_now_add=True, editable=False)
-    edited = models.DateTimeField(auto_now=True, editable=False)
+    name = models.CharField(max_length=100, verbose_name=_('Name'))
+    contragent = models.ForeignKey(Contragent, on_delete=models.CASCADE, verbose_name=_('Contragent'))
+    address = models.TextField(max_length=500, verbose_name=_('Address'))
+    created = models.DateTimeField(auto_now_add=True, editable=False, verbose_name=_('date of creation'))
+    edited = models.DateTimeField(auto_now=True, editable=False, verbose_name=_('date of edition'))
 
+    """
     def total_amount_base(self):
         '''
         counting total base price of all lots in particular stock
         :return:
         '''
         return self.lot_set.aggregate(models.Sum('total_base_price')).get('total_base_price__sum') #pylint: disable=no-member
-
-    def total_amount_sell(self):
-        '''
-        counting total selling price of all lots in particular stock
-        :return:
-        '''
-        return self.lot_set.aggregate(                                         #pylint: disable=no-member
-            models.Sum('total_selling_price')).get('total_selling_price__sum')
-
+    """
+    
     def __str__(self):
         '''
         str method for Stock model
@@ -42,5 +37,5 @@ class Stock(models.Model):
         '''
         meta class for stock
         '''
-        verbose_name = 'Склад'
-        verbose_name_plural = 'Склад'
+        verbose_name = _('Stock')
+        verbose_name_plural = _('Stocks')

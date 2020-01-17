@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-01-17 11:08+0000\n"
+"POT-Creation-Date: 2020-01-17 17:32+0500\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -20,243 +20,326 @@ msgstr ""
 "%10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || (n%10>=5 && n%10<=9) || (n"
 "%100>=11 && n%100<=14)? 2 : 3);\n"
 
-#: addresses/apps.py:7
+#: .\addresses\apps.py:7
 msgid "Address Book"
-msgstr ""
+msgstr "Адресная книга"
 
-#: addresses/models.py:6 addresses/models.py:17 contragents/models.py:15
+#: .\addresses\models.py:6 .\addresses\models.py:17 .\contragents\models.py:20
 msgid "Country"
-msgstr ""
+msgstr "Страна"
 
-#: addresses/models.py:9
+#: .\addresses\models.py:9
 msgid "Countries"
-msgstr ""
+msgstr "Страны"
 
-#: addresses/models.py:10
+#: .\addresses\models.py:10
 msgid "Country code"
-msgstr ""
+msgstr "Код страны"
 
-#: addresses/models.py:18 addresses/models.py:22 addresses/models.py:29
-#: contragents/models.py:17
+#: .\addresses\models.py:18 .\addresses\models.py:22 .\addresses\models.py:29
+#: .\contragents\models.py:22
 msgid "Region"
-msgstr ""
+msgstr "Область"
 
-#: addresses/models.py:21
+#: .\addresses\models.py:21
 msgid "Regions"
-msgstr ""
+msgstr "Области"
 
-#: addresses/models.py:30 addresses/models.py:34 addresses/models.py:41
-#: contragents/models.py:16
+#: .\addresses\models.py:30 .\addresses\models.py:34 .\addresses\models.py:41
+#: .\contragents\models.py:21
 msgid "City"
-msgstr ""
+msgstr "Город"
 
-#: addresses/models.py:33
+#: .\addresses\models.py:33
 msgid "Cities"
-msgstr ""
+msgstr "Города"
 
-#: addresses/models.py:42 addresses/models.py:46 addresses/models.py:53
-#: contragents/models.py:18
+#: .\addresses\models.py:42 .\addresses\models.py:46 .\addresses\models.py:53
+#: .\contragents\models.py:23
 msgid "District"
-msgstr ""
+msgstr "Район"
 
-#: addresses/models.py:45
+#: .\addresses\models.py:45
 msgid "Districts"
-msgstr ""
+msgstr "Районы"
 
-#: addresses/models.py:54 addresses/models.py:58 contragents/models.py:19
+#: .\addresses\models.py:54 .\addresses\models.py:58 .\contragents\models.py:24
 msgid "Street"
-msgstr ""
+msgstr "Улицы"
 
-#: addresses/models.py:57
+#: .\addresses\models.py:57
 msgid "Streets"
-msgstr ""
+msgstr "Улицы"
 
-#: contragents/apps.py:6
+#: .\contragents\apps.py:6
 msgid "Contragents and contacts"
-msgstr ""
+msgstr "Контрагенты и контакты"
 
-#: contragents/models.py:13
+#: .\contragents\models.py:17
 msgid "Contragent name"
-msgstr ""
+msgstr "Название контрагента"
 
-#: contragents/models.py:14
+#: .\contragents\models.py:18
 msgid "Legal address"
-msgstr ""
+msgstr "Юридический адрес"
 
-#: contragents/models.py:20
+#: .\contragents\models.py:19
+msgid "Contragent type"
+msgstr "Тип контрагента"
+
+#: .\contragents\models.py:25
 msgid "House"
-msgstr ""
+msgstr "Дом"
 
-#: contragents/models.py:21
+#: .\contragents\models.py:26
 msgid "Created date"
-msgstr ""
+msgstr "Дата создания"
 
-#: contragents/models.py:22
+#: .\contragents\models.py:27
 msgid "Edited date"
-msgstr ""
+msgstr "Дата изменения"
 
-#: contragents/models.py:31
+#: .\contragents\models.py:36
 msgid "Contragents"
-msgstr ""
+msgstr "Контрагенты"
 
-#: contragents/models.py:32 contragents/models.py:39
+#: .\contragents\models.py:37 .\contragents\models.py:44 .\stocks\models.py:15
 msgid "Contragent"
-msgstr ""
+msgstr "Контрагент"
 
-#: contragents/models.py:40 hr/models.py:21
+#: .\contragents\models.py:45 .\hr\models.py:21
 msgid "First name"
-msgstr ""
+msgstr "Имя"
 
-#: contragents/models.py:41 hr/models.py:22
+#: .\contragents\models.py:46 .\hr\models.py:22
 msgid "Middle name"
-msgstr ""
+msgstr "Отчество"
 
-#: contragents/models.py:42 hr/models.py:23
+#: .\contragents\models.py:47 .\hr\models.py:23
 msgid "Last name"
-msgstr ""
+msgstr "Фамилия"
 
-#: contragents/models.py:43 hr/models.py:24
+#: .\contragents\models.py:48 .\hr\models.py:24
 msgid "Phone number"
-msgstr ""
+msgstr "Номер телефона"
 
-#: contragents/models.py:44 hr/models.py:25
+#: .\contragents\models.py:49 .\hr\models.py:25
 msgid "Position"
-msgstr ""
+msgstr "Местонахождение"
 
-#: contragents/models.py:45 hr/models.py:26
+#: .\contragents\models.py:50 .\hr\models.py:26
 msgid "Role"
-msgstr ""
+msgstr "Роль"
 
-#: contragents/models.py:46 hr/models.py:27
+#: .\contragents\models.py:51 .\hr\models.py:27
 msgid "Birth day"
-msgstr ""
+msgstr "День рождения"
 
-#: contragents/models.py:47 hr/models.py:28
+#: .\contragents\models.py:52 .\hr\models.py:28
 msgid "Created"
-msgstr ""
+msgstr "Создан"
 
-#: contragents/models.py:48 hr/models.py:29
+#: .\contragents\models.py:53 .\hr\models.py:29
 msgid "Edited"
-msgstr ""
+msgstr "Изменен"
 
-#: contragents/models.py:51
+#: .\contragents\models.py:56
 msgid "Contact"
-msgstr ""
+msgstr "Контакт"
 
-#: contragents/models.py:52
+#: .\contragents\models.py:57
 msgid "Contacts"
-msgstr ""
+msgstr "Контакты"
 
-#: goods/models.py:16
+#: .\goods\models.py:16
 msgid "Name of manufacturer"
-msgstr ""
+msgstr "Название производителя"
 
-#: goods/models.py:17
+#: .\goods\models.py:17
 msgid "The country of manufacture"
-msgstr ""
+msgstr "Страна производства"
 
-#: goods/models.py:18 goods/models.py:34 goods/models.py:50 goods/models.py:66
-#: goods/models.py:82 goods/models.py:98 goods/models.py:130
+#: .\goods\models.py:18 .\goods\models.py:34 .\goods\models.py:50
+#: .\goods\models.py:66 .\goods\models.py:82 .\goods\models.py:98
+#: .\goods\models.py:130
 msgid "Date Added"
 msgstr "Дата создания"
 
-#: goods/models.py:19 goods/models.py:35 goods/models.py:51 goods/models.py:67
-#: goods/models.py:83 goods/models.py:99 goods/models.py:131
+#: .\goods\models.py:19 .\goods\models.py:35 .\goods\models.py:51
+#: .\goods\models.py:67 .\goods\models.py:83 .\goods\models.py:99
+#: .\goods\models.py:131
 msgid "Editing Date"
 msgstr "Дата изменения"
 
-#: goods/models.py:25
+#: .\goods\models.py:25
 msgid "Manufacturer"
 msgstr "Производитель"
 
-#: goods/models.py:26
+#: .\goods\models.py:26
 msgid "Manufacturers"
 msgstr "Производители"
 
-#: goods/models.py:33 goods/models.py:41 goods/models.py:113
+#: .\goods\models.py:33 .\goods\models.py:41 .\goods\models.py:113
 msgid "Product Name"
 msgstr "Наименование продукта"
 
-#: goods/models.py:42
+#: .\goods\models.py:42
 msgid "Product Names"
 msgstr "Наименования продукта"
 
-#: goods/models.py:49
+#: .\goods\models.py:49
 msgid "Category Name"
-msgstr ""
+msgstr "Название категории"
 
-#: goods/models.py:57 goods/models.py:126
+#: .\goods\models.py:57 .\goods\models.py:126
 msgid "Category"
-msgstr ""
+msgstr "Категория"
 
-#: goods/models.py:58
+#: .\goods\models.py:58
 msgid "Product Categories"
-msgstr ""
+msgstr "Категории продукта"
 
-#: goods/models.py:65 goods/models.py:73 goods/models.py:127
+#: .\goods\models.py:65 .\goods\models.py:73 .\goods\models.py:127
 msgid "Unit of measure"
-msgstr ""
+msgstr "Единица измерения"
 
-#: goods/models.py:74
+#: .\goods\models.py:74
 msgid "Units of measurement"
-msgstr ""
+msgstr "Единицы измерения"
 
-#: goods/models.py:81 goods/models.py:89 goods/models.py:119
+#: .\goods\models.py:81 .\goods\models.py:89 .\goods\models.py:119
 msgid "Packaging Type"
-msgstr ""
+msgstr "Тип упаковки"
 
-#: goods/models.py:90
+#: .\goods\models.py:90
 msgid "Packaging types"
-msgstr ""
+msgstr "Типы упаковки"
 
-#: goods/models.py:97 goods/models.py:105
+#: .\goods\models.py:97 .\goods\models.py:105
 msgid "Quantity in the original"
 msgstr "Кол-во в оригинале"
 
-#: goods/models.py:106 goods/models.py:124
+#: .\goods\models.py:106 .\goods\models.py:124
 msgid "Originality"
 msgstr "Оригинальность"
 
-#: goods/models.py:114
+#: .\goods\models.py:114
 msgid "Maker"
-msgstr ""
+msgstr "Производитель"
 
-#: goods/models.py:125
+#: .\goods\models.py:125
 msgid "Photo"
-msgstr ""
+msgstr "Фото"
 
-#: goods/models.py:128
+#: .\goods\models.py:128
 msgid "Description"
-msgstr ""
+msgstr "Описание"
 
-#: goods/models.py:129
+#: .\goods\models.py:129
 msgid "URL"
-msgstr ""
+msgstr "URL"
 
-#: goods/models.py:144
+#: .\goods\models.py:144
 msgid "Good"
-msgstr ""
+msgstr "Товар"
 
-#: goods/models.py:145
+#: .\goods\models.py:145
 msgid "Goods"
-msgstr ""
+msgstr "Товары"
 
-#: hr/apps.py:6
+#: .\hr\apps.py:6
 msgid "Human resource"
-msgstr ""
+msgstr "Отдел кадров"
 
-#: hr/models.py:9 hr/models.py:15 hr/models.py:20
+#: .\hr\models.py:9 .\hr\models.py:15 .\hr\models.py:20
 msgid "Department"
-msgstr ""
+msgstr "Отдел"
 
-#: hr/models.py:16
+#: .\hr\models.py:16
 msgid "Departments"
-msgstr ""
+msgstr "Отделы"
 
-#: hr/models.py:35
+#: .\hr\models.py:35
 msgid "Employee"
-msgstr ""
+msgstr "Сотрудники"
 
-#: hr/models.py:36
+#: .\hr\models.py:36
 msgid "Employees"
-msgstr ""
+msgstr "Сотрудники"
+
+#: .\lots\models.py:16
+msgid "Currency"
+msgstr "Валюта"
+
+#: .\lots\models.py:29 .\lots\models.py:44
+msgid "currency"
+msgstr "Валюта"
+
+#: .\lots\models.py:30
+#, fuzzy
+#| msgid "currency"
+msgid "currencies"
+msgstr "Валюта"
+
+#: .\lots\models.py:40
+msgid "lot number"
+msgstr "Номер партии"
+
+#: .\lots\models.py:41
+#, fuzzy
+#| msgid "Product Name"
+msgid "Product"
+msgstr "Наименование продукта"
+
+#: .\lots\models.py:42
+msgid "base price"
+msgstr "Базовая цена"
+
+#: .\lots\models.py:43
+msgid "series"
+msgstr "Серия"
+
+#: .\lots\models.py:45
+msgid "shelf life"
+msgstr "Срок годности"
+
+#: .\lots\models.py:46 .\stocks\models.py:17
+msgid "date of creation"
+msgstr "Дата создания"
+
+#: .\lots\models.py:47 .\stocks\models.py:18
+msgid "date of edition"
+msgstr "Дата изменения"
+
+#: .\lots\models.py:48
+msgid "quantity"
+msgstr "Количество"
+
+#: .\lots\models.py:49 .\stocks\models.py:46
+msgid "Stock"
+msgstr "Склад"
+
+#: .\lots\models.py:77
+msgid "Lot"
+msgstr "Партия"
+
+#: .\lots\models.py:78
+msgid "Lots"
+msgstr "Партии"
+
+#: .\stocks\models.py:14
+msgid "Name"
+msgstr "Название"
+
+#: .\stocks\models.py:16
+msgid "Address"
+msgstr "Адрес"
+
+#: .\stocks\models.py:47
+#, fuzzy
+#| msgid "Stock"
+msgid "Stocks"
+msgstr "Склады"
+
+#~ msgid "total base price"
+#~ msgstr "Общая базовая цена"
