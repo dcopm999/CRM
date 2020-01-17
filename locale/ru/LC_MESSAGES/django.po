@@ -175,11 +175,11 @@ msgstr "Производители"
 
 #: goods/models.py:33 goods/models.py:41 goods/models.py:113
 msgid "Product Name"
-msgstr ""
+msgstr "Наименование продукта"
 
 #: goods/models.py:42
 msgid "Product Names"
-msgstr ""
+msgstr "Наименования продукта"
 
 #: goods/models.py:49
 msgid "Category Name"
