@@ -7,3 +7,4 @@ static/
 !**/migrations/__init__.py
 *~
 *.pyc
+**/locale/**/LC_MESSAGES/*.mo

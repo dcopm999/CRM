@@ -57,7 +57,7 @@ class Lot(models.Model):
         '''
         self.lot_number = f'Партия {str(uuid4())[:8]}'
         self.total_base_price = self.base_price*self.quantity
-        self.total_selling_price = self.selling_price*self.quantity
+        # self.total_selling_price = self.selling_price*self.quantity
         super(Lot, self).save(*args, **kwargs)
 
     def total_amount(self):
