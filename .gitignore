@@ -1,6 +1,7 @@
 db.sqlite3
 .vscode/
 venv/
+static/
 **/__pycache__/**
 **/migrations/**
 !**/migrations/__init__.py
