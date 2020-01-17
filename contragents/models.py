@@ -3,6 +3,8 @@ from django.db import models
 from django.utils.translation import ugettext_lazy as _
 
 from addresses import models as addresses_models
+from hr import models as hr_models
+
 
 LOGGER = logging.getLogger(__name__)
     
@@ -30,6 +32,7 @@ class Contragent(models.Model):
     okpo = models.CharField(max_length=20, blank=True, verbose_name="OKПO")
     oked = models.CharField(max_length=20, blank=True, verbose_name="OКЭД")
     code_nds = models.CharField(max_length=20, blank=True, verbose_name="РКП НДС")
+    manager = models.ForeignKey(hr_models.Employee, on_delete=models.CASCADE, verbose_name=_('Manager'))
     # point = models.PointField(blank=True, null=True, verbose_name=_("Gis point")
     
     class Meta:
