@@ -39,13 +39,18 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
 ]
 
-OWN_APP = [
+OTHER_APPS = [
+    'mptt'
+]
+
+OWN_APPS = [
     'addresses',
     'contragents',
     'crm',
+    'hr',
 ]
 
-INSTALLED_APPS += OWN_APP
+INSTALLED_APPS = INSTALLED_APPS + OWN_APPS + OTHER_APPS
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
