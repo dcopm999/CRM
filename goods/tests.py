@@ -34,7 +34,7 @@ class GoodsTestCase(TestCase):
         '''
         test for Maker model's __str__ method
         '''
-        self.assertEqual(self.maker.__str__(), 'Хлебо-Булочный Завод,Узбекистан')
+        self.assertEqual(self.maker.__str__(), 'Хлебо-Булочный Завод, Узбекистан')
 
     def test_category_str(self):
         '''
@@ -64,4 +64,10 @@ class GoodsTestCase(TestCase):
         '''
         test for Good model's __str__ method
         '''
-        self.assertEqual(self.good.__str__(), 'Хлеб,Хлебо-Булочный Завод,Узбекистан,Продукты питания')
+        self.assertEqual(self.good.__str__(), 'Хлеб, Хлебо-Булочный Завод, Узбекистан, Продукты питания')
+
+    def test_good_save(self):
+        '''
+        test for Good model's save method
+        '''
+        self.assertEqual(self.good.slug, 'hleb-hlebo-bulochnyij-zavoduzbekistan')
