@@ -49,7 +49,8 @@ OWN_APPS = [
     'crm',
     'hr',
     'goods',
-    'stocks'
+    'stocks',
+    'lots'
 ]
 
 INSTALLED_APPS = INSTALLED_APPS + OWN_APPS + OTHER_APPS
