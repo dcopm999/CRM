@@ -2,6 +2,7 @@
 package: stocks
 description: models
 '''
+from decimal import Decimal
 from django.db import models
 from django.utils.translation import ugettext_lazy as _
 from contragents.models import Contragent
@@ -17,15 +18,18 @@ class Stock(models.Model):
     created = models.DateTimeField(auto_now_add=True, editable=False, verbose_name=_('date of creation'))
     edited = models.DateTimeField(auto_now=True, editable=False, verbose_name=_('date of edition'))
 
-    """
+
     def total_amount_base(self):
         '''
         counting total base price of all lots in particular stock
         :return:
         '''
-        return self.lot_set.aggregate(models.Sum('total_base_price')).get('total_base_price__sum') #pylint: disable=no-member
-    """
-    
+        summ = Decimal()
+        for lot in self.lot_set.all():
+            summ += lot.total_amount()
+        return summ
+
+
     def __str__(self):
         '''
         str method for Stock model
