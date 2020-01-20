@@ -44,7 +44,7 @@ class Contragent(models.Model):
         return self.name
 
 class Contact(models.Model):
-    contragent = models.ForeignKey(Contragent, on_delete=models.CASCADE, editable=False, verbose_name=_("Contragent"))
+    contragent = models.ForeignKey(Contragent, on_delete=models.CASCADE, verbose_name=_("Contragent"))
     first_name = models.CharField(max_length=50, verbose_name=_("First name"))
     middle_name = models.CharField(max_length=50, verbose_name=_("Middle name"))
     last_name = models.CharField(max_length=50, verbose_name=_("Last name"))
