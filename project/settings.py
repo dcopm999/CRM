@@ -48,6 +48,7 @@ OTHER_APPS = [
 ]
 
 OWN_APPS = [
+    'frontend_app',
     'revaluation',
     'contragents',
     'addresses',

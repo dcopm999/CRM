@@ -19,5 +19,7 @@ from django.urls import path, include
 
 
 urlpatterns = i18n_patterns(
+    path('', include('frontend_app.urls', namespace='frontend')),
+    path('i18n/', include('django.conf.urls.i18n')),
     path('admin/', admin.site.urls),
 )
