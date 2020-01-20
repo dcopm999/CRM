@@ -31,7 +31,7 @@ class Agreement(models.Model):
     edited = models.DateTimeField(auto_now=True, verbose_name=_("Edited date"), editable=False)
     
     def __str__(self):
-        return self.code
+        return f'{self.code}: {self.result}'
     
     class Meta:
         verbose_name = _('Agreement')
