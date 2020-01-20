@@ -6,6 +6,7 @@ from decimal import Decimal
 from django.db import models
 from django.utils.translation import ugettext_lazy as _
 from contragents.models import Contragent
+from addresses import models as addresses_models
 
 
 class Stock(models.Model):
@@ -13,8 +14,16 @@ class Stock(models.Model):
     Model for stocks
     '''
     name = models.CharField(max_length=100, verbose_name=_('Name'))
-    contragent = models.ForeignKey(Contragent, on_delete=models.CASCADE, verbose_name=_('Contragent'))
-    address = models.TextField(max_length=500, verbose_name=_('Address'))
+    country = models.ForeignKey(addresses_models.Country, on_delete=models.CASCADE, blank=True, null=True,
+                                verbose_name=_("Country"))
+    city = models.ForeignKey(addresses_models.City, on_delete=models.CASCADE, blank=True, null=True,
+                             verbose_name=_("City"))
+    region = models.ForeignKey(addresses_models.Region, on_delete=models.CASCADE, blank=True, null=True,
+                               verbose_name=_("Region"))
+    district = models.ForeignKey(addresses_models.District, on_delete=models.CASCADE, blank=True, null=True,
+                                 verbose_name=_("District"))
+    street = models.ForeignKey(addresses_models.Street, verbose_name=_("Street"), on_delete=models.CASCADE)
+    house = models.CharField(max_length=50, blank=True, null=True, verbose_name=_("House"))
     created = models.DateTimeField(auto_now_add=True, editable=False, verbose_name=_('date of creation'))
     edited = models.DateTimeField(auto_now=True, editable=False, verbose_name=_('date of edition'))
 
