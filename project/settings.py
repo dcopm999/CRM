@@ -48,13 +48,14 @@ OTHER_APPS = [
 ]
 
 OWN_APPS = [
-    'addresses',
+    'revaluation',
     'contragents',
+    'addresses',
+    'stocks',
+    'goods',
+    'lots',
     'crm',
     'hr',
-    'goods',
-    'stocks',
-    'lots'
 ]
 
 INSTALLED_APPS = INSTALLED_APPS + OWN_APPS + OTHER_APPS

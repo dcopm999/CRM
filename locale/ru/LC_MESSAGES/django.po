@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-01-17 17:32+0500\n"
+"POT-Creation-Date: 2020-01-20 11:48+0500\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -24,7 +24,7 @@ msgstr ""
 msgid "Address Book"
 msgstr "Адресная книга"
 
-#: .\addresses\models.py:6 .\addresses\models.py:17 .\contragents\models.py:20
+#: .\addresses\models.py:6 .\addresses\models.py:17 .\contragents\models.py:22
 msgid "Country"
 msgstr "Страна"
 
@@ -37,7 +37,7 @@ msgid "Country code"
 msgstr "Код страны"
 
 #: .\addresses\models.py:18 .\addresses\models.py:22 .\addresses\models.py:29
-#: .\contragents\models.py:22
+#: .\contragents\models.py:24
 msgid "Region"
 msgstr "Область"
 
@@ -46,7 +46,7 @@ msgid "Regions"
 msgstr "Области"
 
 #: .\addresses\models.py:30 .\addresses\models.py:34 .\addresses\models.py:41
-#: .\contragents\models.py:21
+#: .\contragents\models.py:23
 msgid "City"
 msgstr "Город"
 
@@ -55,7 +55,7 @@ msgid "Cities"
 msgstr "Города"
 
 #: .\addresses\models.py:42 .\addresses\models.py:46 .\addresses\models.py:53
-#: .\contragents\models.py:23
+#: .\contragents\models.py:25
 msgid "District"
 msgstr "Район"
 
@@ -63,7 +63,7 @@ msgstr "Район"
 msgid "Districts"
 msgstr "Районы"
 
-#: .\addresses\models.py:54 .\addresses\models.py:58 .\contragents\models.py:24
+#: .\addresses\models.py:54 .\addresses\models.py:58 .\contragents\models.py:26
 msgid "Street"
 msgstr "Улицы"
 
@@ -75,81 +75,129 @@ msgstr "Улицы"
 msgid "Contragents and contacts"
 msgstr "Контрагенты и контакты"
 
-#: .\contragents\models.py:17
+#: .\contragents\models.py:19
 msgid "Contragent name"
 msgstr "Название контрагента"
 
-#: .\contragents\models.py:18
+#: .\contragents\models.py:20
 msgid "Legal address"
 msgstr "Юридический адрес"
 
-#: .\contragents\models.py:19
+#: .\contragents\models.py:21
 msgid "Contragent type"
 msgstr "Тип контрагента"
 
-#: .\contragents\models.py:25
+#: .\contragents\models.py:27
 msgid "House"
 msgstr "Дом"
 
-#: .\contragents\models.py:26
+#: .\contragents\models.py:28 .\crm\models.py:9 .\crm\models.py:29
 msgid "Created date"
 msgstr "Дата создания"
 
-#: .\contragents\models.py:27
+#: .\contragents\models.py:29 .\crm\models.py:10 .\crm\models.py:30
 msgid "Edited date"
 msgstr "Дата изменения"
 
-#: .\contragents\models.py:36
+#: .\contragents\models.py:35
+msgid "Manager"
+msgstr "Менеджер"
+
+#: .\contragents\models.py:39
 msgid "Contragents"
 msgstr "Контрагенты"
 
-#: .\contragents\models.py:37 .\contragents\models.py:44 .\stocks\models.py:15
+#: .\contragents\models.py:40 .\contragents\models.py:47 .\stocks\models.py:16
 msgid "Contragent"
 msgstr "Контрагент"
 
-#: .\contragents\models.py:45 .\hr\models.py:21
+#: .\contragents\models.py:48 .\hr\models.py:21
 msgid "First name"
 msgstr "Имя"
 
-#: .\contragents\models.py:46 .\hr\models.py:22
+#: .\contragents\models.py:49 .\hr\models.py:22
 msgid "Middle name"
 msgstr "Отчество"
 
-#: .\contragents\models.py:47 .\hr\models.py:23
+#: .\contragents\models.py:50 .\hr\models.py:23
 msgid "Last name"
 msgstr "Фамилия"
 
-#: .\contragents\models.py:48 .\hr\models.py:24
+#: .\contragents\models.py:51 .\hr\models.py:24
 msgid "Phone number"
 msgstr "Номер телефона"
 
-#: .\contragents\models.py:49 .\hr\models.py:25
+#: .\contragents\models.py:52 .\hr\models.py:25
 msgid "Position"
 msgstr "Местонахождение"
 
-#: .\contragents\models.py:50 .\hr\models.py:26
+#: .\contragents\models.py:53 .\hr\models.py:26
 msgid "Role"
 msgstr "Роль"
 
-#: .\contragents\models.py:51 .\hr\models.py:27
+#: .\contragents\models.py:54 .\hr\models.py:27
 msgid "Birth day"
 msgstr "День рождения"
 
-#: .\contragents\models.py:52 .\hr\models.py:28
+#: .\contragents\models.py:55 .\hr\models.py:28
 msgid "Created"
 msgstr "Создан"
 
-#: .\contragents\models.py:53 .\hr\models.py:29
+#: .\contragents\models.py:56 .\hr\models.py:29
 msgid "Edited"
 msgstr "Изменен"
 
-#: .\contragents\models.py:56
+#: .\contragents\models.py:59
 msgid "Contact"
 msgstr "Контакт"
 
-#: .\contragents\models.py:57
+#: .\contragents\models.py:60
 msgid "Contacts"
 msgstr "Контакты"
+
+#: .\crm\apps.py:6
+msgid "Customer Relationship Management"
+msgstr "Управление взаимоотношениями с клиентами"
+
+#: .\crm\models.py:8 .\crm\models.py:16 .\crm\models.py:27
+msgid "Agreement status"
+msgstr "Статус сделки"
+
+#: .\crm\models.py:17
+msgid "Agreement statuses"
+msgstr "Статусы сделки"
+
+#: .\crm\models.py:22
+msgid "Accepted"
+msgstr "Принято"
+
+#: .\crm\models.py:23
+msgid "Refused"
+msgstr "Отказано"
+
+#: .\crm\models.py:24
+msgid "In progress"
+msgstr "Выполняется"
+
+#: .\crm\models.py:26
+msgid "Unique agreement code"
+msgstr "Уникальный код сделки"
+
+#: .\crm\models.py:28
+msgid "Agreement result"
+msgstr "Результат сделки"
+
+#: .\crm\models.py:36
+msgid "Agreement"
+msgstr "Сделка"
+
+#: .\crm\models.py:37
+msgid "Agreements"
+msgstr "Сделки"
+
+#: .\goods\apps.py:13 .\goods\models.py:145
+msgid "Goods"
+msgstr "Товары"
 
 #: .\goods\models.py:16
 msgid "Name of manufacturer"
@@ -243,10 +291,6 @@ msgstr "URL"
 msgid "Good"
 msgstr "Товар"
 
-#: .\goods\models.py:145
-msgid "Goods"
-msgstr "Товары"
-
 #: .\hr\apps.py:6
 msgid "Human resource"
 msgstr "Отдел кадров"
@@ -266,6 +310,10 @@ msgstr "Сотрудники"
 #: .\hr\models.py:36
 msgid "Employees"
 msgstr "Сотрудники"
+
+#: .\lots\apps.py:7 .\lots\models.py:76
+msgid "Lots"
+msgstr "Партии"
 
 #: .\lots\models.py:16
 msgid "Currency"
@@ -303,11 +351,11 @@ msgstr "Серия"
 msgid "shelf life"
 msgstr "Срок годности"
 
-#: .\lots\models.py:46 .\stocks\models.py:17
+#: .\lots\models.py:46 .\stocks\models.py:18
 msgid "date of creation"
 msgstr "Дата создания"
 
-#: .\lots\models.py:47 .\stocks\models.py:18
+#: .\lots\models.py:47 .\stocks\models.py:19
 msgid "date of edition"
 msgstr "Дата изменения"
 
@@ -315,31 +363,60 @@ msgstr "Дата изменения"
 msgid "quantity"
 msgstr "Количество"
 
-#: .\lots\models.py:49 .\stocks\models.py:46
+#: .\lots\models.py:49 .\stocks\models.py:44
 msgid "Stock"
 msgstr "Склад"
 
-#: .\lots\models.py:77
+#: .\lots\models.py:75
 msgid "Lot"
 msgstr "Партия"
 
-#: .\lots\models.py:78
-msgid "Lots"
-msgstr "Партии"
+#: .\project\settings.py:129
+msgid "Russian"
+msgstr "Русский"
 
-#: .\stocks\models.py:14
-msgid "Name"
-msgstr "Название"
+#: .\project\settings.py:130
+msgid "English"
+msgstr "Английский"
 
-#: .\stocks\models.py:16
-msgid "Address"
-msgstr "Адрес"
+#: .\project\settings.py:131
+msgid "Simplified Chinese"
+msgstr "Простой китайский"
 
-#: .\stocks\models.py:47
+#: .\revaluation\models.py:12
+#, fuzzy
+#| msgid "revaluation model name"
+msgid "pricing model name"
+msgstr "Название модели ценообразования"
+
+#: .\revaluation\models.py:13
+msgid "coefficient"
+msgstr "Коэффициент"
+
+#: .\revaluation\models.py:16
+msgid "Pricing model"
+msgstr "Модель ценообразования"
+
+#: .\revaluation\models.py:17
+msgid "Pricing models"
+msgstr "Модели ценообразования"
+
+#: .\stocks\apps.py:6 .\stocks\models.py:45
 #, fuzzy
 #| msgid "Stock"
 msgid "Stocks"
 msgstr "Склады"
+
+#: .\stocks\models.py:15
+msgid "Name"
+msgstr "Название"
+
+#: .\stocks\models.py:17
+msgid "Address"
+msgstr "Адрес"
+
+#~ msgid "percent"
+#~ msgstr "Коэффициент"
 
 #~ msgid "total base price"
 #~ msgstr "Общая базовая цена"
