@@ -70,7 +70,7 @@ MIDDLEWARE = [
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
     'django.middleware.locale.LocaleMiddleware',
-    'frontend_app.middlewares.Carousel',
+    'frontend_app.middlewares.CarouselMiddleware',
 ]
 
 ROOT_URLCONF = 'project.urls'
