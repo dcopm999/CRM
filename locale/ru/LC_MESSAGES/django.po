@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-01-17 19:40+0500\n"
+"POT-Creation-Date: 2020-01-20 12:36+0500\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -107,7 +107,7 @@ msgstr "Менеджер"
 msgid "Contragents"
 msgstr "Контрагенты"
 
-#: .\contragents\models.py:40 .\contragents\models.py:47 .\stocks\models.py:15
+#: .\contragents\models.py:40 .\contragents\models.py:47 .\stocks\models.py:16
 msgid "Contragent"
 msgstr "Контрагент"
 
@@ -311,7 +311,7 @@ msgstr "Сотрудники"
 msgid "Employees"
 msgstr "Сотрудники"
 
-#: .\lots\apps.py:7 .\lots\models.py:78
+#: .\lots\apps.py:7 .\lots\models.py:76
 msgid "Lots"
 msgstr "Партии"
 
@@ -351,11 +351,11 @@ msgstr "Серия"
 msgid "shelf life"
 msgstr "Срок годности"
 
-#: .\lots\models.py:46 .\stocks\models.py:17
+#: .\lots\models.py:46 .\stocks\models.py:18
 msgid "date of creation"
 msgstr "Дата создания"
 
-#: .\lots\models.py:47 .\stocks\models.py:18
+#: .\lots\models.py:47 .\stocks\models.py:19
 msgid "date of edition"
 msgstr "Дата изменения"
 
@@ -363,37 +363,53 @@ msgstr "Дата изменения"
 msgid "quantity"
 msgstr "Количество"
 
-#: .\lots\models.py:49 .\stocks\models.py:40
+#: .\lots\models.py:49 .\stocks\models.py:44
 msgid "Stock"
 msgstr "Склад"
 
-#: .\lots\models.py:77
+#: .\lots\models.py:75
 msgid "Lot"
 msgstr "Партия"
 
-#: .\project\settings.py:128
-msgid "Russian"
-msgstr ""
-
 #: .\project\settings.py:129
-msgid "English"
-msgstr ""
+msgid "Russian"
+msgstr "Русский"
 
 #: .\project\settings.py:130
-msgid "Simplified Chinese"
-msgstr ""
+msgid "English"
+msgstr "Английский"
 
-#: .\stocks\apps.py:6 .\stocks\models.py:41
+#: .\project\settings.py:131
+msgid "Simplified Chinese"
+msgstr "Простой китфйский"
+
+#: .\revaluation\models.py:12
+msgid "pricing model name"
+msgstr "Название модели ценообразования"
+
+#: .\revaluation\models.py:13
+msgid "coefficient"
+msgstr "Коэффициент"
+
+#: .\revaluation\models.py:19
+msgid "Pricing model"
+msgstr "Модель ценообразования"
+
+#: .\revaluation\models.py:20
+msgid "Pricing models"
+msgstr "Модели ценообразования"
+
+#: .\stocks\apps.py:6 .\stocks\models.py:45
 #, fuzzy
 #| msgid "Stock"
 msgid "Stocks"
 msgstr "Склады"
 
-#: .\stocks\models.py:14
+#: .\stocks\models.py:15
 msgid "Name"
 msgstr "Название"
 
-#: .\stocks\models.py:16
+#: .\stocks\models.py:17
 msgid "Address"
 msgstr "Адрес"
 
