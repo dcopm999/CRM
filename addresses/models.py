@@ -53,6 +53,9 @@ class Street(models.Model):
     parent = models.ForeignKey(District, verbose_name=_("District"), on_delete=models.CASCADE)
     name = models.CharField(max_length=250, blank=True, null=True, verbose_name=_("Street"))
 
+    def __str__(self):
+        return self.name
+    
     class Meta:
         verbose_name_plural = _("Streets")
         verbose_name = _("Street")
