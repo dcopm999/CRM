@@ -1,3 +1,8 @@
 from django.contrib import admin
 
-# Register your models here.
+from frontend_app import models
+
+
+@admin.register(models.Carousel)
+class CarouselAdmin(admin.ModelAdmin):
+    list_display = ['good', 'title', 'created', 'edited']
