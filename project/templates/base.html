@@ -1,0 +1,131 @@
+{% load static i18n %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>{% block title %}init.py{% endblock %}</title>
+    
+    <link rel="stylesheet" href="{% static '/css/font-awesome.min.css' %}">
+    <link rel="stylesheet" href="{% static '/css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static '/css/animate.min.css' %}">
+    <link rel="stylesheet" href="{% static '/css/style.css' %}">
+    <link rel="stylesheet" href="{% static '/css/responsive.css' %}">
+    <link rel="stylesheet" href="{% static '/css/project.css' %}">
+    <link rel="stylesheet" href="{% static '/css/opensans.css' %}" type='text/css'>
+    <script src="{% static '/js/modernizr.js' %}"></script>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-144566172-1"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+
+            gtag('config', 'UA-144566172-1');
+        </script>
+
+    <!--[if lt IE 9]>
+	<script src="{% static 'js/html5shiv.js' %}"></script>
+	<script src="{% static 'js/respond.min.js' %}"></script>
+	<![endif]-->
+  </head>
+  <body>
+    <!-- ====================================================header section -->
+
+    <header class="top-header">
+      <div class="container">
+	<div class="row">
+	  <!-- nav starts here -->
+	  <div class="col-md-12">
+	    {% block top_menu %}
+	    {% include 'top_menu.html' %}
+	    {% endblock top_menu %}
+	  </div>
+	</div>
+      </div>
+    </header><!-- end of header section -->
+
+    
+
+    <!-- banner section starts here -->
+    <section class="banner" id="home">      
+      {% block banner %}
+      {% endblock banner %}      
+    </section><!-- end of banner section -->
+
+
+    <!-- service section -->
+    <div id="service-title">
+
+    </div>
+
+    <section class="service" id="service">
+      {% block service %}
+      {% endblock service %}
+    </section><!-- end of service section -->
+    
+    <!-- about section -->
+    <section class="about" id="about">
+
+
+    </section><!-- end of details section -->
+    
+    <!-- pricing-slide section starts here -->
+    <section class="team" id="team">
+      {% block team %}  
+      {% endblock team %}
+    </section><!-- end of pricing-slide section -->
+    
+    <!-- contact section -->
+    <section class="contact text-center" id="contact">
+      {% block contact %}
+      {% endblock contact %}
+    </section><!-- end of contact section -->
+    
+    <!-- google map api -->
+    <div class="map">
+      <div class="container-fluid">
+	<div class="row">
+	  <div id="map"></div> <!-- api map -->
+	</div>
+      </div>
+    </div>
+
+    <!-- footer starts here -->
+    <footer class="footer text-center">
+      <div class="container">
+	<div class="row">
+	  <div class="col-md-12">
+	    <div class="icons">
+	      <a href=""><i class="fa fa-behance"></i></a>
+	      <a href=""><i class="fa fa-dribbble"></i></a>
+	      <a href=""><i class="fa fa-twitter"></i></a>
+	      <a href=""><i class="fa fa-facebook"></i></a>
+	      <a href=""><i class="fa fa-linkedin"></i></a>
+	    </div>
+	    <p>COPYRIGHT &copy; </p>
+	  </div>
+	</div>
+      </div>
+    </footer>
+    
+    <!-- script tags
+	 ============================================================= -->
+    <script src="{% static '/js/jquery-2.1.1.js' %}"></script>
+    <script src="{% static '/js/smoothscroll.js' %}"></script>
+    <script src="{% static '/js/bootstrap.min.js' %}"></script>
+    <script src="{% static '/js/custom.js' %}"></script>
+    <script src="{% static '/js/wow.js' %}"></script>
+    <script src="https://maps.google.com/maps/api/js?sensor=true"></script>
+    <script src="{% static '/js/gmaps.js' %}"></script>
+    <script>
+      var map = new GMaps({
+      el: '#map',
+      lat: -12.043333,
+      lng: -77.028333
+      });
+    </script>
+  </body>
+</html>

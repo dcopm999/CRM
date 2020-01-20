@@ -1,0 +1,5 @@
+User-agent: *
+Disallow: /admin/
+Allow: /
+Host: https://it.atm.uz
+Sitemap: https://it.atm.uz/sitemap.xml
