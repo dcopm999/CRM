@@ -56,7 +56,7 @@ class Contact(models.Model):
     edited = models.DateTimeField(auto_now=True, editable=False, verbose_name=_("Edited"))
     
     def __str__(self):
-        return f'{self.contragent.name}: {self.last_name} {self.middle_name} {self.name}'
+        return f'{self.contragent.name}: {self.last_name} {self.middle_name} {self.first_name}'
     
     class Meta:
         verbose_name = _("Contact")
