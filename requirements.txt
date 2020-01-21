@@ -4,3 +4,5 @@ django-suit==0.2.26
 django-sekizai==1.0.0
 pytils>=0.3
 Pillow>=7.0.0
+Faker == 4.0.0
+factory_boy == 2.12.0
