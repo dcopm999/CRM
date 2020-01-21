@@ -28,13 +28,13 @@ class GoodsTestCase(TestCase):
         '''
         test for TradeName model's __str__ method
         '''
-        self.assertEqual(self.trade_name.__str__(), 'Хлеб')
+        self.assertEqual(self.trade_name.__str__(), 'Молоко')
 
     def test_maker_str(self):
         '''
         test for Maker model's __str__ method
         '''
-        self.assertEqual(self.maker.__str__(), 'Хлебо-Булочный Завод, Узбекистан')
+        self.assertEqual(self.maker.__str__(), 'Nestle, Узбекистан')
 
     def test_category_str(self):
         '''
@@ -46,28 +46,28 @@ class GoodsTestCase(TestCase):
         '''
         test for Measure model's __str__ method
         '''
-        self.assertEqual(self.measure.__str__(), 'шт')
+        self.assertEqual(self.measure.__str__(), 'литр')
 
     def test_packing_str(self):
         '''
         test for Packing model's __str__ method
         '''
-        self.assertEqual(self.packing.__str__(), 'Картон')
+        self.assertEqual(self.packing.__str__(), 'TetraPak')
 
     def test_original_str(self):
         '''
         test for Original model's __str__ method
         '''
-        self.assertEqual(self.original.__str__(), '6')
+        self.assertEqual(self.original.__str__(), '12')
 
     def test_good_str(self):
         '''
         test for Good model's __str__ method
         '''
-        self.assertEqual(self.good.__str__(), 'Хлеб, Хлебо-Булочный Завод, Узбекистан, Продукты питания')
+        self.assertEqual(self.good.__str__(), 'Молоко, Nestle, Узбекистан, Продукты питания')
 
     def test_good_save(self):
         '''
         test for Good model's save method
         '''
-        self.assertEqual(self.good.slug, 'hleb-hlebo-bulochnyij-zavoduzbekistan')
+        self.assertEqual(self.good.slug, 'moloko-nestle-uzbekistan')
