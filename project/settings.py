@@ -44,7 +44,9 @@ INSTALLED_APPS = [
 ]
 
 OTHER_APPS = [
-    'mptt'
+    'mptt',
+    'factory',
+    'faker'
 ]
 
 OWN_APPS = [
