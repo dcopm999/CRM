@@ -178,12 +178,14 @@ SUIT_CONFIG = {
     # },
     # 'MENU_OPEN_FIRST_CHILD': True, # Default True
     # 'MENU_EXCLUDE': ('auth.group',),
-    # 'MENU': (
-    #     'sites',
-    #     {'app': 'auth', 'icon':'icon-lock', 'models': ('user', 'group')},
-    #     {'label': 'Settings', 'icon':'icon-cog', 'models': ('auth.user', 'auth.group')},
-    #     {'label': 'Support', 'icon':'icon-question-sign', 'url': '/support/'},
-    # ),
+    'MENU': (
+        {'app': 'crm', 'icon':'icon-shopping-cart'},
+        {'app': 'contragents', 'icon':'icon-book'},
+        {'app': 'goods', 'icon':'icon-barcode'},
+        {'app': 'hr', 'icon':'icon-user'},
+        {'app': 'auth', 'icon':'icon-lock', 'models': ('user', 'group')},
+        {'label': 'Support', 'icon':'icon-question-sign', 'url': '/support/'},
+    ),
 
     # misc
     # 'LIST_PER_PAGE': 15
