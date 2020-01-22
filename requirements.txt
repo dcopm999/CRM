@@ -2,6 +2,7 @@ Django==2.2.3
 django-mptt>=0.10.0
 django-suit==0.2.26
 django-sekizai==1.0.0
+django-import-export==2.0.1
 pytils>=0.3
 Pillow>=7.0.0
 Faker == 4.0.0

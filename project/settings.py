@@ -44,6 +44,7 @@ INSTALLED_APPS = [
 ]
 
 OTHER_APPS = [
+    'import_export',
     'mptt',
     'factory',
     'faker'
@@ -190,3 +191,6 @@ SUIT_CONFIG = {
     # misc
     # 'LIST_PER_PAGE': 15
 }
+
+# import export settings
+IMPORT_EXPORT_USE_TRANSACTIONS = True
