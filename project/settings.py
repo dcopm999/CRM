@@ -50,6 +50,7 @@ OTHER_APPS = [
 ]
 
 OWN_APPS = [
+    'custom_utilities',
     'frontend_app',
     'revaluation',
     'contragents',

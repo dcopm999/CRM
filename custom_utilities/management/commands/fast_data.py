@@ -1,5 +1,5 @@
 from django.core.management.base import BaseCommand, CommandError
-from .required import *
+from custom_utilities.management.commands.required import *
 
 class Command(BaseCommand):
 
