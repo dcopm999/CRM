@@ -9,5 +9,5 @@ class CarouselMiddleware:
         return response
     
     def process_template_response(self, request, response):
-        response.context_data['carousel'] = Carousel.objects.all()
+        response.context_data['carousel_list'] = Carousel.objects.all()
         return response

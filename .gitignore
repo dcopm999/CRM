@@ -8,3 +8,5 @@ static/
 *~
 *.pyc
 **/locale/**/LC_MESSAGES/*.mo
+docs/build/**
+media/
