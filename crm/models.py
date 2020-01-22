@@ -44,7 +44,7 @@ class AgreementTask(models.Model):
     contact = models.ForeignKey(Contact, verbose_name=_("Contact"), on_delete=models.CASCADE)
     desc = models.TextField(verbose_name=_('Description'))
     date = models.DateTimeField(auto_now=True, verbose_name=_('Task date'))
-    is_active = models.BooleanField(default=False, verbose_name=_('Is sctive'))
+    is_active = models.BooleanField(default=False, verbose_name=_('Is active'))
     created = models.DateTimeField(auto_now_add=True, verbose_name=_("Created date"), editable=False)
     edited = models.DateTimeField(auto_now=True, verbose_name=_("Edited date"), editable=False)
 
