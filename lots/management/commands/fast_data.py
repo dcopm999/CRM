@@ -2,8 +2,12 @@ from django.core.management.base import BaseCommand, CommandError
 from .required import *
 
 class Command(BaseCommand):
+
+    def add_arguments(self, parser):
+        parser.add_argument('range', nargs='+', type=int)
+
     def handle(self, *args, **options):
-        for _ in range(1000):
+        for _ in range(options['range'][0]):
             country = CountryFactory.create()
             country.save()
             region = RegionFactory.create()
@@ -32,6 +36,10 @@ class Command(BaseCommand):
             department.save()
             employee = EmployeeFactory.create()
             employee.save()
+            contragent = ContragentFactory()
+            contragent.save()
+            contact = ContactFactory()
+            contact.save()
             currency = CurrencyFactory.create()
             currency.save()
             stock = StockFactory.create()
@@ -40,7 +48,9 @@ class Command(BaseCommand):
             lot.save()
             revaluation = RevaluationFactory.create()
             revaluation.save()
-            agreement_status = AgreementStatusFactory.create()
-            agreement_status.save()
+            task_status = TaskStatusFactory.create()
+            task_status.save()
             agreement = AgreementFactory.create()
             agreement.save()
+
+        self.stdout.write(self.style.SUCCESS('Successfully created "%s" records' % options['range']))

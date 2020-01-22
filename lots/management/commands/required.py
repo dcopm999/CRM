@@ -1,13 +1,6 @@
 import factory
 import random
 from decimal import Decimal
-from addresses import models as addresses_models
-from goods import models as goods_models
-from hr import models as hr_models
-from lots import models as lots_models
-from stocks import models as stocks_models
-from revaluation import models as revaluation_models
-from crm import models as crm_models
 
 factory.Faker._DEFAULT_LOCALE = 'ru_RU'
 
@@ -60,6 +53,8 @@ class StreetFactory(factory.django.DjangoModelFactory):
     parent = DistrictFactory()
 
 
+
+
 class MakerFactory(factory.django.DjangoModelFactory):
 
     class Meta:
@@ -91,7 +86,7 @@ class CategoryFactory(factory.django.DjangoModelFactory):
 class MeasureFactory(factory.django.DjangoModelFactory):
 
     class Meta:
-        model = goods_models.Measure
+        model = 'goods.Measure'
         django_get_or_create = ('name', )
 
     name = factory.Faker('pyint')
@@ -119,7 +114,7 @@ class GoodFactory(factory.django.DjangoModelFactory):
 
     class Meta:
         model = 'goods.Good'
-        django_get_or_create = ('description', )
+        django_get_or_create = ('name', )
 
     name = TradeNameFactory()
     maker = MakerFactory()
@@ -161,6 +156,68 @@ class EmployeeFactory(factory.django.DjangoModelFactory):
     position = factory.Faker('job')
     role = factory.Faker('job')
     birthday = factory.Faker('date_of_birth')
+
+
+class ContragentFactory(factory.django.DjangoModelFactory):
+
+    class Meta:
+        model = 'contragents.Contragent'
+        django_get_or_create = (
+            'name',
+            'address_ur',
+            'contragent_type',
+            'country',
+            'city',
+            'district',
+            'street',
+            'house',
+            'inn',
+            'okonh',
+            'okpo',
+            'oked',
+            'code_nds',
+            'manager',
+        )
+
+    name = factory.Faker('company')
+    address_ur = factory.Faker('address')
+    contragent_type = random.choice([1, 2])
+    country = CountryFactory()
+    region = RegionFactory()
+    city = CityFactory()
+    district = DistrictFactory()
+    street = StreetFactory()
+    house = factory.Faker('pyint')
+    inn = factory.Faker('credit_card_number')
+    okonh = factory.Faker('word')
+    okpo = factory.Faker('word')
+    oked = factory.Faker('word')
+    code_nds = factory.Faker('word')
+    manager = EmployeeFactory()
+
+
+class ContactFactory(factory.django.DjangoModelFactory):
+
+    class Meta:
+        model = 'contragents.Contact'
+        django_get_or_create = (
+            'first_name',
+            'middle_name',
+            'last_name',
+            'phone',
+            'position',
+            'role',
+            'birthday',
+        )
+
+    contragent = ContragentFactory()
+    first_name = factory.Faker('name')
+    middle_name = factory.Faker('middle_name')
+    last_name = factory.Faker('last_name')
+    phone = factory.Faker('phone_number')
+    position = factory.Faker('job')
+    role = factory.Faker('job')
+    birthday = factory.Faker('date')
 
 
 class CurrencyFactory(factory.django.DjangoModelFactory):
@@ -219,10 +276,10 @@ class RevaluationFactory(factory.django.DjangoModelFactory):
     coefficient = factory.Faker('pyfloat')
 
 
-class AgreementStatusFactory(factory.django.DjangoModelFactory):
+class TaskStatusFactory(factory.django.DjangoModelFactory):
 
     class Meta:
-        model = 'crm.AgreementStatus'
+        model = 'crm.TaskStatus'
         django_get_or_create = ('name', )
 
     name = factory.Faker('word')
@@ -232,7 +289,20 @@ class AgreementFactory(factory.django.DjangoModelFactory):
 
     class Meta:
         model = 'crm.Agreement'
-        django_get_or_create = ('status', 'result', )
+        django_get_or_create = ('result', )
 
-    status = AgreementStatusFactory()
     result = random.choice([0,1,2])
+
+class AgreementTaskFactory(factory.django.DjangoModelFactory):
+
+    class Meta:
+        model = 'crm.AgreementTask'
+        django_get_or_create = ('desc', 'date', 'is_active', )
+
+    status = TaskStatusFactory()
+    agreement = AgreementFactory()
+    contact = ContactFactory()
+    desc = factory.Faker('text')
+    date = factory.Faker('date')
+    is_active = factory.Faker('pybool')
+
