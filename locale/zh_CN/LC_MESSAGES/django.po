@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-01-17 19:40+0500\n"
+"POT-Creation-Date: 2020-01-22 12:24+0500\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -22,6 +22,7 @@ msgid "Address Book"
 msgstr "地址簿"
 
 #: .\addresses\models.py:6 .\addresses\models.py:17 .\contragents\models.py:22
+#: .\stocks\models.py:18
 msgid "Country"
 msgstr "国家"
 
@@ -34,7 +35,7 @@ msgid "Country code"
 msgstr "国家代码"
 
 #: .\addresses\models.py:18 .\addresses\models.py:22 .\addresses\models.py:29
-#: .\contragents\models.py:24
+#: .\contragents\models.py:24 .\stocks\models.py:22
 msgid "Region"
 msgstr "区域"
 
@@ -43,7 +44,7 @@ msgid "Regions"
 msgstr "地区"
 
 #: .\addresses\models.py:30 .\addresses\models.py:34 .\addresses\models.py:41
-#: .\contragents\models.py:23
+#: .\contragents\models.py:23 .\stocks\models.py:20
 msgid "City"
 msgstr "市"
 
@@ -52,7 +53,7 @@ msgid "Cities"
 msgstr "城市"
 
 #: .\addresses\models.py:42 .\addresses\models.py:46 .\addresses\models.py:53
-#: .\contragents\models.py:25
+#: .\contragents\models.py:25 .\stocks\models.py:24
 msgid "District"
 msgstr "区"
 
@@ -60,11 +61,12 @@ msgstr "区"
 msgid "Districts"
 msgstr "地区"
 
-#: .\addresses\models.py:54 .\addresses\models.py:58 .\contragents\models.py:26
+#: .\addresses\models.py:54 .\addresses\models.py:61 .\contragents\models.py:26
+#: .\stocks\models.py:25
 msgid "Street"
 msgstr "街"
 
-#: .\addresses\models.py:57
+#: .\addresses\models.py:60
 msgid "Streets"
 msgstr "街道"
 
@@ -84,15 +86,17 @@ msgstr "合法地址"
 msgid "Contragent type"
 msgstr "对比类型"
 
-#: .\contragents\models.py:27
+#: .\contragents\models.py:27 .\stocks\models.py:26
 msgid "House"
 msgstr "屋"
 
-#: .\contragents\models.py:28 .\crm\models.py:9 .\crm\models.py:29
+#: .\contragents\models.py:28 .\crm\models.py:11 .\crm\models.py:30
+#: .\crm\models.py:48
 msgid "Created date"
 msgstr "创建日期"
 
-#: .\contragents\models.py:29 .\crm\models.py:10 .\crm\models.py:30
+#: .\contragents\models.py:29 .\crm\models.py:12 .\crm\models.py:31
+#: .\crm\models.py:49
 msgid "Edited date"
 msgstr "编辑日期"
 
@@ -104,7 +108,7 @@ msgstr "经理"
 msgid "Contragents"
 msgstr "矛盾者"
 
-#: .\contragents\models.py:40 .\contragents\models.py:47 .\stocks\models.py:15
+#: .\contragents\models.py:40 .\contragents\models.py:47
 msgid "Contragent"
 msgstr "代理商"
 
@@ -144,11 +148,12 @@ msgstr ""
 msgid "Edited"
 msgstr ""
 
-#: .\contragents\models.py:59
+#: .\contragents\models.py:62 .\crm\models.py:44
 msgid "Contact"
 msgstr ""
 
-#: .\contragents\models.py:60
+#: .\contragents\models.py:63 .\project\templates\pages\home.html:75
+#: .\project\templates\top_menu.html:26
 msgid "Contacts"
 msgstr ""
 
@@ -156,40 +161,92 @@ msgstr ""
 msgid "Customer Relationship Management"
 msgstr ""
 
-#: .\crm\models.py:8 .\crm\models.py:16 .\crm\models.py:27
-msgid "Agreement status"
+#: .\crm\models.py:10 .\crm\models.py:18
+msgid "Task status"
 msgstr ""
 
-#: .\crm\models.py:17
-msgid "Agreement statuses"
-msgstr ""
-
-#: .\crm\models.py:22
-msgid "Accepted"
-msgstr ""
-
-#: .\crm\models.py:23
-msgid "Refused"
+#: .\crm\models.py:19
+msgid "Task statuses"
 msgstr ""
 
 #: .\crm\models.py:24
-msgid "In progress"
+msgid "Accepted"
+msgstr ""
+
+#: .\crm\models.py:25
+msgid "Refused"
 msgstr ""
 
 #: .\crm\models.py:26
-msgid "Unique agreement code"
+msgid "In progress"
 msgstr ""
 
 #: .\crm\models.py:28
+msgid "Unique agreement code"
+msgstr ""
+
+#: .\crm\models.py:29
 msgid "Agreement result"
 msgstr ""
 
-#: .\crm\models.py:36
+#: .\crm\models.py:37 .\crm\models.py:43
 msgid "Agreement"
 msgstr ""
 
-#: .\crm\models.py:37
+#: .\crm\models.py:38
 msgid "Agreements"
+msgstr ""
+
+#: .\crm\models.py:42
+msgid "Agreement status"
+msgstr ""
+
+#: .\crm\models.py:45 .\frontend_app\models.py:9 .\goods\models.py:128
+msgid "Description"
+msgstr ""
+
+#: .\crm\models.py:46
+msgid "Task date"
+msgstr ""
+
+#: .\crm\models.py:47
+msgid "Is sctive"
+msgstr ""
+
+#: .\crm\models.py:55
+msgid "Task"
+msgstr ""
+
+#: .\crm\models.py:56
+msgid "Tasks"
+msgstr ""
+
+#: .\frontend_app\models.py:8
+msgid "Title"
+msgstr ""
+
+#: .\frontend_app\models.py:10 .\goods\models.py:144
+msgid "Good"
+msgstr ""
+
+#: .\frontend_app\models.py:11 .\goods\models.py:18 .\goods\models.py:34
+#: .\goods\models.py:50 .\goods\models.py:66 .\goods\models.py:82
+#: .\goods\models.py:98 .\goods\models.py:130
+msgid "Date Added"
+msgstr ""
+
+#: .\frontend_app\models.py:12 .\goods\models.py:19 .\goods\models.py:35
+#: .\goods\models.py:51 .\goods\models.py:67 .\goods\models.py:83
+#: .\goods\models.py:99 .\goods\models.py:131
+msgid "Editing Date"
+msgstr ""
+
+#: .\frontend_app\models.py:18
+msgid "good in carousel"
+msgstr ""
+
+#: .\frontend_app\models.py:19
+msgid "goods in carousel"
 msgstr ""
 
 #: .\goods\apps.py:13 .\goods\models.py:145
@@ -202,18 +259,6 @@ msgstr ""
 
 #: .\goods\models.py:17
 msgid "The country of manufacture"
-msgstr ""
-
-#: .\goods\models.py:18 .\goods\models.py:34 .\goods\models.py:50
-#: .\goods\models.py:66 .\goods\models.py:82 .\goods\models.py:98
-#: .\goods\models.py:130
-msgid "Date Added"
-msgstr ""
-
-#: .\goods\models.py:19 .\goods\models.py:35 .\goods\models.py:51
-#: .\goods\models.py:67 .\goods\models.py:83 .\goods\models.py:99
-#: .\goods\models.py:131
-msgid "Editing Date"
 msgstr ""
 
 #: .\goods\models.py:25
@@ -276,16 +321,8 @@ msgstr ""
 msgid "Photo"
 msgstr ""
 
-#: .\goods\models.py:128
-msgid "Description"
-msgstr ""
-
 #: .\goods\models.py:129
 msgid "URL"
-msgstr ""
-
-#: .\goods\models.py:144
-msgid "Good"
 msgstr ""
 
 #: .\hr\apps.py:6
@@ -308,7 +345,7 @@ msgstr ""
 msgid "Employees"
 msgstr ""
 
-#: .\lots\apps.py:7 .\lots\models.py:78
+#: .\lots\apps.py:7 .\lots\models.py:76
 msgid "Lots"
 msgstr ""
 
@@ -344,11 +381,11 @@ msgstr ""
 msgid "shelf life"
 msgstr ""
 
-#: .\lots\models.py:46 .\stocks\models.py:17
+#: .\lots\models.py:46 .\stocks\models.py:27
 msgid "date of creation"
 msgstr ""
 
-#: .\lots\models.py:47 .\stocks\models.py:18
+#: .\lots\models.py:47 .\stocks\models.py:28
 msgid "date of edition"
 msgstr ""
 
@@ -356,34 +393,351 @@ msgstr ""
 msgid "quantity"
 msgstr ""
 
-#: .\lots\models.py:49 .\stocks\models.py:40
+#: .\lots\models.py:49 .\stocks\models.py:53
 msgid "Stock"
 msgstr ""
 
-#: .\lots\models.py:77
+#: .\lots\models.py:75
 msgid "Lot"
 msgstr ""
 
-#: .\project\settings.py:128
+#: .\project\settings.py:133
 msgid "Russian"
 msgstr ""
 
-#: .\project\settings.py:129
+#: .\project\settings.py:134
 msgid "English"
 msgstr ""
 
-#: .\project\settings.py:130
+#: .\project\settings.py:135
 msgid "Simplified Chinese"
 msgstr ""
 
-#: .\stocks\apps.py:6 .\stocks\models.py:41
+#: .\project\templates\account\account_inactive.html:5
+#: .\project\templates\account\account_inactive.html:8
+msgid "Account Inactive"
+msgstr ""
+
+#: .\project\templates\account\account_inactive.html:10
+msgid "This account is inactive."
+msgstr ""
+
+#: .\project\templates\account\email.html:7
+msgid "Account"
+msgstr ""
+
+#: .\project\templates\account\email.html:10
+#, fuzzy
+#| msgid "Legal address"
+msgid "E-mail Addresses"
+msgstr "合法地址"
+
+#: .\project\templates\account\email.html:13
+msgid "The following e-mail addresses are associated with your account:"
+msgstr ""
+
+#: .\project\templates\account\email.html:27
+msgid "Verified"
+msgstr ""
+
+#: .\project\templates\account\email.html:29
+msgid "Unverified"
+msgstr ""
+
+#: .\project\templates\account\email.html:31
+msgid "Primary"
+msgstr ""
+
+#: .\project\templates\account\email.html:37
+msgid "Make Primary"
+msgstr ""
+
+#: .\project\templates\account\email.html:38
+msgid "Re-send Verification"
+msgstr ""
+
+#: .\project\templates\account\email.html:39
+msgid "Remove"
+msgstr ""
+
+#: .\project\templates\account\email.html:46
+msgid "Warning:"
+msgstr ""
+
+#: .\project\templates\account\email.html:46
+msgid ""
+"You currently do not have any e-mail address set up. You should really add "
+"an e-mail address so you can receive notifications, reset your password, etc."
+msgstr ""
+
+#: .\project\templates\account\email.html:51
+msgid "Add E-mail Address"
+msgstr ""
+
+#: .\project\templates\account\email.html:56
+msgid "Add E-mail"
+msgstr ""
+
+#: .\project\templates\account\email.html:66
+msgid "Do you really want to remove the selected e-mail address?"
+msgstr ""
+
+#: .\project\templates\account\email_confirm.html:6
+#: .\project\templates\account\email_confirm.html:10
+msgid "Confirm E-mail Address"
+msgstr ""
+
+#: .\project\templates\account\email_confirm.html:16
+#, python-format
+msgid ""
+"Please confirm that <a href=\"mailto:%(email)s\">%(email)s</a> is an e-mail "
+"address for user %(user_display)s."
+msgstr ""
+
+#: .\project\templates\account\email_confirm.html:20
+msgid "Confirm"
+msgstr ""
+
+#: .\project\templates\account\email_confirm.html:27
+#, python-format
+msgid ""
+"This e-mail confirmation link expired or is invalid. Please <a href="
+"\"%(email_url)s\">issue a new e-mail confirmation request</a>."
+msgstr ""
+
+#: .\project\templates\account\login.html:7
+#: .\project\templates\account\login.html:11
+#: .\project\templates\account\login.html:44
+msgid "Sign In"
+msgstr ""
+
+#: .\project\templates\account\login.html:16
+#, python-format
+msgid ""
+"Please sign in with one\n"
+"of your existing third party accounts. Or, <a href=\"%(signup_url)s\">sign "
+"up</a>\n"
+"for a %(site_name)s account and sign in below:"
+msgstr ""
+
+#: .\project\templates\account\login.html:26
+msgid "or"
+msgstr ""
+
+#: .\project\templates\account\login.html:33
+#, python-format
+msgid ""
+"If you have not created an account yet, then please\n"
+"<a href=\"%(signup_url)s\">sign up</a> first."
+msgstr ""
+
+#: .\project\templates\account\login.html:43
+msgid "Forgot Password?"
+msgstr ""
+
+#: .\project\templates\account\logout.html:5
+#: .\project\templates\account\logout.html:8
+#: .\project\templates\account\logout.html:17
+msgid "Sign Out"
+msgstr ""
+
+#: .\project\templates\account\logout.html:10
+msgid "Are you sure you want to sign out?"
+msgstr ""
+
+#: .\project\templates\account\password_change.html:6
+#: .\project\templates\account\password_change.html:9
+#: .\project\templates\account\password_change.html:14
+#: .\project\templates\account\password_reset_from_key.html:5
+#: .\project\templates\account\password_reset_from_key.html:8
+#: .\project\templates\account\password_reset_from_key_done.html:4
+#: .\project\templates\account\password_reset_from_key_done.html:7
+msgid "Change Password"
+msgstr ""
+
+#: .\project\templates\account\password_reset.html:7
+#: .\project\templates\account\password_reset.html:11
+#: .\project\templates\account\password_reset_done.html:6
+#: .\project\templates\account\password_reset_done.html:9
+msgid "Password Reset"
+msgstr ""
+
+#: .\project\templates\account\password_reset.html:16
+msgid ""
+"Forgotten your password? Enter your e-mail address below, and we'll send you "
+"an e-mail allowing you to reset it."
+msgstr ""
+
+#: .\project\templates\account\password_reset.html:21
+msgid "Reset My Password"
+msgstr ""
+
+#: .\project\templates\account\password_reset.html:24
+msgid "Please contact us if you have any trouble resetting your password."
+msgstr ""
+
+#: .\project\templates\account\password_reset_done.html:15
+msgid ""
+"We have sent you an e-mail. Please contact us if you do not receive it "
+"within a few minutes."
+msgstr ""
+
+#: .\project\templates\account\password_reset_from_key.html:8
+msgid "Bad Token"
+msgstr ""
+
+#: .\project\templates\account\password_reset_from_key.html:12
+#, python-format
+msgid ""
+"The password reset link was invalid, possibly because it has already been "
+"used.  Please request a <a href=\"%(passwd_reset_url)s\">new password reset</"
+"a>."
+msgstr ""
+
+#: .\project\templates\account\password_reset_from_key.html:18
+msgid "change password"
+msgstr ""
+
+#: .\project\templates\account\password_reset_from_key.html:21
+#: .\project\templates\account\password_reset_from_key_done.html:8
+msgid "Your password is now changed."
+msgstr ""
+
+#: .\project\templates\account\password_set.html:6
+#: .\project\templates\account\password_set.html:9
+#: .\project\templates\account\password_set.html:14
+msgid "Set Password"
+msgstr ""
+
+#: .\project\templates\account\signup.html:6
+msgid "Signup"
+msgstr ""
+
+#: .\project\templates\account\signup.html:9
+#: .\project\templates\account\signup.html:19
+msgid "Sign Up"
+msgstr ""
+
+#: .\project\templates\account\signup.html:11
+#, python-format
+msgid ""
+"Already have an account? Then please <a href=\"%(login_url)s\">sign in</a>."
+msgstr ""
+
+#: .\project\templates\account\signup_closed.html:5
+#: .\project\templates\account\signup_closed.html:8
+msgid "Sign Up Closed"
+msgstr ""
+
+#: .\project\templates\account\signup_closed.html:10
+msgid "We are sorry, but the sign up is currently closed."
+msgstr ""
+
+#: .\project\templates\account\verification_sent.html:5
+#: .\project\templates\account\verification_sent.html:8
+#: .\project\templates\account\verified_email_required.html:5
+#: .\project\templates\account\verified_email_required.html:8
+msgid "Verify Your E-mail Address"
+msgstr ""
+
+#: .\project\templates\account\verification_sent.html:10
+msgid ""
+"We have sent an e-mail to you for verification. Follow the link provided to "
+"finalize the signup process. Please contact us if you do not receive it "
+"within a few minutes."
+msgstr ""
+
+#: .\project\templates\account\verified_email_required.html:12
+msgid ""
+"This part of the site requires us to verify that\n"
+"you are who you claim to be. For this purpose, we require that you\n"
+"verify ownership of your e-mail address. "
+msgstr ""
+
+#: .\project\templates\account\verified_email_required.html:16
+msgid ""
+"We have sent an e-mail to you for\n"
+"verification. Please click on the link inside this e-mail. Please\n"
+"contact us if you do not receive it within a few minutes."
+msgstr ""
+
+#: .\project\templates\account\verified_email_required.html:20
+#, python-format
+msgid ""
+"<strong>Note:</strong> you can still <a href=\"%(email_url)s\">change your e-"
+"mail address</a>."
+msgstr ""
+
+#: .\project\templates\lng_menu.html:19
+msgid "Change"
+msgstr ""
+
+#: .\project\templates\pages\home.html:7
+msgid "Services"
+msgstr ""
+
+#: .\project\templates\pages\home.html:8
+msgid "List of services provided"
+msgstr ""
+
+#: .\project\templates\pages\home.html:29
+msgid "Primary assets are people"
+msgstr ""
+
+#: .\project\templates\pages\home.html:30 .\project\templates\top_menu.html:24
+msgid "Team members"
+msgstr ""
+
+#: .\project\templates\pages\home.html:74
+msgid "stay in touch"
+msgstr ""
+
+#: .\project\templates\pages\home.html:110
+msgid "send message"
+msgstr ""
+
+#: .\project\templates\top_menu.html:21
+msgid "Main"
+msgstr ""
+
+#: .\project\templates\top_menu.html:22
+msgid "Service"
+msgstr ""
+
+#: .\project\templates\top_menu.html:23
+msgid "About as"
+msgstr ""
+
+#: .\project\templates\top_menu.html:25
+msgid "Prices"
+msgstr ""
+
+#: .\revaluation\apps.py:6
+#, fuzzy
+#| msgid "Regions"
+msgid "Revaluation"
+msgstr "地区"
+
+#: .\revaluation\models.py:12
+msgid "pricing model name"
+msgstr ""
+
+#: .\revaluation\models.py:13
+msgid "coefficient"
+msgstr ""
+
+#: .\revaluation\models.py:19
+msgid "Pricing model"
+msgstr ""
+
+#: .\revaluation\models.py:20
+msgid "Pricing models"
+msgstr ""
+
+#: .\stocks\apps.py:6 .\stocks\models.py:54
 msgid "Stocks"
 msgstr ""
 
-#: .\stocks\models.py:14
-msgid "Name"
-msgstr ""
-
 #: .\stocks\models.py:16
-msgid "Address"
+msgid "Name"
 msgstr ""
