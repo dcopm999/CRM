@@ -41,7 +41,7 @@ class Lot(models.Model):
     good = models.ForeignKey(Good, on_delete=models.CASCADE, verbose_name=_('Product'))
     base_price = models.DecimalField(max_digits=20, decimal_places=2, verbose_name=_('base price'))
     series = models.CharField(max_length=20, verbose_name=_('series'))
-    currency = models.ForeignKey(Currency, on_delete=models.CASCADE, verbose_name=_('currency'))
+    currency = models.ForeignKey(Currency, on_delete=models.CASCADE, verbose_name=_('Currency'))
     shelf_life = models.DateField(verbose_name=_('shelf life'))
     created = models.DateTimeField(auto_now_add=True, editable=False, verbose_name=_('date of creation'))
     edited = models.DateTimeField(auto_now=True, editable=False, verbose_name=_('date of edition'))
