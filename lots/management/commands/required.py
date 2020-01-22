@@ -114,7 +114,7 @@ class GoodFactory(factory.django.DjangoModelFactory):
 
     class Meta:
         model = 'goods.Good'
-        django_get_or_create = ('description', )
+        django_get_or_create = ('name', )
 
     name = TradeNameFactory()
     maker = MakerFactory()
