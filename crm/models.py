@@ -28,7 +28,7 @@ class Agreement(models.Model):
     ]
     code = models.UUIDField(default=uuid4, editable=False, verbose_name=_('Unique agreement code'))
     contragent = models.ForeignKey(Contragent, verbose_name=_("Contragent"), on_delete=models.CASCADE)
-    result = models.PositiveSmallIntegerField(choices=RESULT, verbose_name=_('Agreement result'))
+    result = models.PositiveSmallIntegerField(choices=RESULT, default=3, verbose_name=_('Agreement result'))
     created = models.DateTimeField(auto_now_add=True, verbose_name=_("Created date"), editable=False)
     edited = models.DateTimeField(auto_now=True, verbose_name=_("Edited date"), editable=False)
     
