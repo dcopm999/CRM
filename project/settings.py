@@ -51,14 +51,13 @@ OTHER_APPS = [
 ]
 
 OWN_APPS = [
-    'custom_utilities',
     'frontend_app',
-    'revaluation',
     'contragents',
     'addresses',
+    'pricing',
     'stocks',
     'goods',
-    'lots',
+    'utils',
     'crm',
     'hr',
 ]
@@ -184,8 +183,10 @@ SUIT_CONFIG = {
         {'app': 'contragents', 'icon':'icon-book'},
         {'app': 'goods', 'icon':'icon-barcode'},
         {'app': 'hr', 'icon':'icon-user'},
+        {'app': 'stocks', 'icon':' icon-inbox'},
+        {'app': 'pricing',},
         {'app': 'auth', 'icon':'icon-lock', 'models': ('user', 'group')},
-        {'label': 'Support', 'icon':'icon-question-sign', 'url': '/support/'},
+        {'label': 'Support', 'icon':'icon-question-sign', 'url': 'http://127.0.0.1:8000'},
     ),
 
     # misc

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-01-22 20:58+0500\n"
+"POT-Creation-Date: 2020-01-25 12:27+0500\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -22,7 +22,7 @@ msgid "Address Book"
 msgstr "地址簿"
 
 #: .\addresses\models.py:6 .\addresses\models.py:17 .\contragents\models.py:22
-#: .\stocks\models.py:18
+#: .\stocks\models.py:20
 msgid "Country"
 msgstr "国家"
 
@@ -35,7 +35,7 @@ msgid "Country code"
 msgstr "国家代码"
 
 #: .\addresses\models.py:18 .\addresses\models.py:22 .\addresses\models.py:29
-#: .\contragents\models.py:24 .\stocks\models.py:22
+#: .\contragents\models.py:24 .\stocks\models.py:21
 msgid "Region"
 msgstr "区域"
 
@@ -44,7 +44,7 @@ msgid "Regions"
 msgstr "地区"
 
 #: .\addresses\models.py:30 .\addresses\models.py:34 .\addresses\models.py:41
-#: .\contragents\models.py:23 .\stocks\models.py:20
+#: .\contragents\models.py:23 .\stocks\models.py:22
 msgid "City"
 msgstr "市"
 
@@ -53,7 +53,7 @@ msgid "Cities"
 msgstr "城市"
 
 #: .\addresses\models.py:42 .\addresses\models.py:46 .\addresses\models.py:53
-#: .\contragents\models.py:25 .\stocks\models.py:24
+#: .\contragents\models.py:25 .\stocks\models.py:23
 msgid "District"
 msgstr "区"
 
@@ -62,7 +62,7 @@ msgid "Districts"
 msgstr "地区"
 
 #: .\addresses\models.py:54 .\addresses\models.py:61 .\contragents\models.py:26
-#: .\stocks\models.py:25
+#: .\stocks\models.py:24
 msgid "Street"
 msgstr "街"
 
@@ -86,7 +86,7 @@ msgstr "合法地址"
 msgid "Contragent type"
 msgstr "对比类型"
 
-#: .\contragents\models.py:27 .\stocks\models.py:26
+#: .\contragents\models.py:27 .\stocks\models.py:25
 msgid "House"
 msgstr "屋"
 
@@ -222,6 +222,7 @@ msgid "Tasks"
 msgstr ""
 
 #: .\crm\models.py:65 .\frontend_app\models.py:10 .\goods\models.py:144
+#: .\stocks\models.py:62
 msgid "Good"
 msgstr ""
 
@@ -359,60 +360,32 @@ msgstr ""
 msgid "Employees"
 msgstr ""
 
-#: .\lots\apps.py:7 .\lots\models.py:76
-msgid "Lots"
+#: .\pricing\apps.py:7
+msgid "Pricing"
 msgstr ""
 
-#: .\lots\models.py:16
+#: .\pricing\models.py:8
+msgid "pricing model name"
+msgstr ""
+
+#: .\pricing\models.py:9
+msgid "coefficient"
+msgstr ""
+
+#: .\pricing\models.py:15
+msgid "Pricing model"
+msgstr ""
+
+#: .\pricing\models.py:16
+msgid "Pricing models"
+msgstr ""
+
+#: .\pricing\models.py:23 .\pricing\models.py:36 .\stocks\models.py:64
 msgid "Currency"
 msgstr ""
 
-#: .\lots\models.py:29 .\lots\models.py:44
-msgid "currency"
-msgstr ""
-
-#: .\lots\models.py:30
-msgid "currencies"
-msgstr ""
-
-#: .\lots\models.py:40
-msgid "lot number"
-msgstr ""
-
-#: .\lots\models.py:41
-msgid "Product"
-msgstr ""
-
-#: .\lots\models.py:42
-msgid "base price"
-msgstr ""
-
-#: .\lots\models.py:43
-msgid "series"
-msgstr ""
-
-#: .\lots\models.py:45
-msgid "shelf life"
-msgstr ""
-
-#: .\lots\models.py:46 .\stocks\models.py:27
-msgid "date of creation"
-msgstr ""
-
-#: .\lots\models.py:47 .\stocks\models.py:28
-msgid "date of edition"
-msgstr ""
-
-#: .\lots\models.py:48
-msgid "quantity"
-msgstr ""
-
-#: .\lots\models.py:49 .\stocks\models.py:53
-msgid "Stock"
-msgstr ""
-
-#: .\lots\models.py:75
-msgid "Lot"
+#: .\pricing\models.py:37
+msgid "Currencies"
 msgstr ""
 
 #: .\project\settings.py:134
@@ -726,32 +699,51 @@ msgstr ""
 msgid "Prices"
 msgstr ""
 
-#: .\revaluation\apps.py:6
-#, fuzzy
-#| msgid "Regions"
-msgid "Revaluation"
-msgstr "地区"
-
-#: .\revaluation\models.py:12
-msgid "pricing model name"
-msgstr ""
-
-#: .\revaluation\models.py:13
-msgid "coefficient"
-msgstr ""
-
-#: .\revaluation\models.py:19
-msgid "Pricing model"
-msgstr ""
-
-#: .\revaluation\models.py:20
-msgid "Pricing models"
-msgstr ""
-
-#: .\stocks\apps.py:6 .\stocks\models.py:54
+#: .\stocks\apps.py:6 .\stocks\models.py:53
 msgid "Stocks"
 msgstr ""
 
-#: .\stocks\models.py:16
+#: .\stocks\models.py:19
 msgid "Name"
 msgstr ""
+
+#: .\stocks\models.py:26 .\stocks\models.py:66
+msgid "date of creation"
+msgstr ""
+
+#: .\stocks\models.py:27 .\stocks\models.py:67
+msgid "date of edition"
+msgstr ""
+
+#: .\stocks\models.py:52 .\stocks\models.py:69
+msgid "Stock"
+msgstr ""
+
+#: .\stocks\models.py:61
+msgid "series"
+msgstr ""
+
+#: .\stocks\models.py:63
+msgid "Base price"
+msgstr ""
+
+#: .\stocks\models.py:65
+msgid "shelf life"
+msgstr ""
+
+#: .\stocks\models.py:68
+msgid "quantity"
+msgstr ""
+
+#: .\stocks\models.py:85
+msgid "Lot"
+msgstr ""
+
+#: .\stocks\models.py:86
+msgid "Lots"
+msgstr ""
+
+#, fuzzy
+#~| msgid "Regions"
+#~ msgid "Revaluation"
+#~ msgstr "地区"

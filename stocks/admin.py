@@ -11,3 +11,6 @@ class StockAdmin(admin.ModelAdmin):
     list_display = ['name']
 
 
+@admin.register(models.Lot)
+class LotAdmin(admin.ModelAdmin):
+    list_display = ['series']
