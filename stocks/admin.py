@@ -13,4 +13,4 @@ class StockAdmin(admin.ModelAdmin):
 
 @admin.register(models.Lot)
 class LotAdmin(admin.ModelAdmin):
-    list_display = ['series']
+    list_display = ['good']

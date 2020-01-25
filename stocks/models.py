@@ -62,10 +62,10 @@ class Lot(models.Model):
     good = models.ForeignKey(good_models.Good, on_delete=models.CASCADE, verbose_name=_('Good'))
     base_price = models.DecimalField(max_digits=20, decimal_places=2, verbose_name=_('Base price'))
     currency = models.ForeignKey(pricing_models.Currency, on_delete=models.CASCADE, verbose_name=_('Currency'))
-    shelf_life = models.DateField(verbose_name=_('shelf life'))
+    # shelf_life = models.DateField(verbose_name=_('shelf life'))
     created = models.DateTimeField(auto_now_add=True, editable=False, verbose_name=_('date of creation'))
     edited = models.DateTimeField(auto_now=True, editable=False, verbose_name=_('date of edition'))
-    quantity = models.PositiveIntegerField(verbose_name=_('quantity'))
+    quantity = models.PositiveIntegerField(default=0, verbose_name=_('quantity'))
     stock = models.ForeignKey(Stock, on_delete=models.CASCADE, null=True, verbose_name=_('Stock'))
 
     def total_amount(self):
