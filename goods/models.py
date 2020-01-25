@@ -131,7 +131,7 @@ class Good(models.Model):
     edited = models.DateTimeField(auto_now=True, editable=False, verbose_name=_('Editing Date'))
 
     def __str__(self):
-        return f'{self.name}, {self.maker}, {self.category}'
+        return f'{self.category}: {self.name}'
 
     def save(self, *args, **kwargs): # pylint: disable=W0221
         self.slug = slugify(
