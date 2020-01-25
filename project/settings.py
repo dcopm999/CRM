@@ -46,11 +46,14 @@ INSTALLED_APPS = [
 
 OTHER_APPS = [
     'import_export',
-    'social_django',
     'sekizai',
     'mptt',
     'factory',
-    'faker'
+    'faker',
+    'allauth',
+    'allauth.account',
+    'allauth.socialaccount',
+    'allauth.socialaccount.providers.vk',
 ]
 
 OWN_APPS = [
@@ -93,8 +96,6 @@ TEMPLATES = [
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
                 'sekizai.context_processors.sekizai',
-                'social_django.context_processors.backends',
-                'social_django.context_processors.login_redirect',
             ],
         },
     },
@@ -114,8 +115,8 @@ DATABASES = {
 }
 
 AUTHENTICATION_BACKENDS = {
-    'social_core.backends.vk.VKOAuth2',
-    'django.contrib.auth.backends.ModelBackend'
+    'django.contrib.auth.backends.ModelBackend',
+    'allauth.account.auth_backends.AuthenticationBackend',
 }
 
 SOCIAL_AUTH_VK_OAUTH2_KEY = '7295059'
