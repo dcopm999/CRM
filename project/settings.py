@@ -50,6 +50,7 @@ OTHER_APPS = [
     'mptt',
     'factory',
     'faker',
+    'crispy_forms',
     'allauth',
     'allauth.account',
     'allauth.socialaccount',
@@ -119,22 +120,9 @@ AUTHENTICATION_BACKENDS = {
     'allauth.account.auth_backends.AuthenticationBackend',
 }
 
-SOCIAL_AUTH_VK_OAUTH2_KEY = '7295059'
-SOCIAL_AUTH_VK_OAUTH2_SECRET = '6V7Bu28NGl55ILe0qAnt'
-SOCIAL_AUTH_VK_OAUTH2_SCOPE = ['email', ]
-
-SOCIAL_AUTH_PIPELINE = (
-    'social_core.pipeline.social_auth.social_details',
-    'social_core.pipeline.social_auth.social_uid',
-    'social_core.pipeline.social_auth.social_user',
-    'social_core.pipeline.user.get_username',
-    'social_core.pipeline.social_auth.associate_by_email',
-    'social_core.pipeline.user.create_user',
-    'social_core.pipeline.social_auth.associate_user',
-    'social_core.pipeline.social_auth.load_extra_data',
-    'social_core.pipeline.user.user_details',
-    'social_core.pipeline.social_auth.associate_by_email',
-)
+ACCOUNT_EMAIL_REQUIRED = True  
+ACCOUNT_USERNAME_REQUIRED = False
+ACCOUNT_AUTHENTICATION_METHOD = 'email'
 
 # Password validation
 # https://docs.djangoproject.com/en/3.0/ref/settings/#auth-password-validators
@@ -214,7 +202,7 @@ SUIT_CONFIG = {
         {'app': 'stocks', 'icon':' icon-inbox'},
         {'app': 'pricing',},
         {'app': 'auth', 'icon':'icon-lock', 'models': ('user', 'group')},
-        {'app': 'social_django'},
+        {'app': 'allauth'},
         {'label': 'Support', 'icon':'icon-question-sign', 'url': 'https://vk.com/initpy'},
     ),
 
